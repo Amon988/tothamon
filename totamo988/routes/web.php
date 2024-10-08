@@ -28,3 +28,17 @@ Route::get('/bejelentkezes', function () {
     return view('bejelentkezes');
 });
 
+Route::get('/gyakorlas', function () {
+    return view('gyakorlas');
+});
+
+Route::view('/', 'welcome', ['name' =>'John']);
+Route::get('/pass-array', function () {
+    $tasks = [
+        'Go to the store',
+        'Go to the market',
+        'Go to the work'
+    ];
+    return view('tasklist')->with(['foo'=>$foobar, 'tasks' =>$tasks]);
+ 
+});
